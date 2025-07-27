@@ -82,13 +82,13 @@ function Profile() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <input
               type="text"
-              value="Anshul"
+              value="Nitesh"
               readOnly
               className="border rounded px-3 py-2 bg-gray-100"
             />
             <input
               type="text"
-              value="Ojha"
+              value="Singh"
               readOnly
               className="border rounded px-3 py-2 bg-gray-100"
             />
