@@ -114,7 +114,7 @@ const Navbar = () => {
           >
             <span className="flex items-center gap-1">
               <span className="text-lg">👤</span>
-              <span className="text-blue-700">Anshul</span>
+              <span className="text-blue-700">Nitesh</span>
               <span className="text-xs">▼</span>
             </span>
             {userMenuOpen && (
