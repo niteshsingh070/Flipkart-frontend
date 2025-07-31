@@ -26,6 +26,7 @@ function Login() {
 // } else {
 //   setError(data.error || "Login failed");
 // }
+    const data = await res.json();
     if (data.token) {
       localStorage.setItem("token", data.token);
       navigate("/");
