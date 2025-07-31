@@ -159,7 +159,7 @@ function AppContent({ products }) {
                                       className="flex-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
                                       onClick={() => {
                                         fetch(
-                                          "https://flipkart-backend-6frd.onrender.com/carts/add",
+                                          "https://flipkart-backend-6frd.onrender.com/cart/add",
                                           {
                                             method: "POST",
                                             headers: {
@@ -191,7 +191,7 @@ function AppContent({ products }) {
                                       onClick={() => {
                                         // Buy Now: Add to cart, then navigate to cart
                                         fetch(
-                                          "https://flipkart-backend-6frd.onrender.com/carts/add",
+                                          "https://flipkart-backend-6frd.onrender.com/cart/add",
                                           {
                                             method: "POST",
                                             headers: {
