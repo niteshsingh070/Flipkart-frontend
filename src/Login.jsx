@@ -17,15 +17,21 @@ function Login() {
         headers: { "Content-Type": "application/json" },
       }
     );
-    //new change 
-    const data = await res.json();
-   if (data.success || data.token || data.user) {
-  localStorage.setItem("token", data.token);          // ✅ Save token
-  localStorage.setItem("userId", data.user._id);      // ✅ Save userId temporarily
-  navigate("/");                                      // ✅ Redirect after login
-} else {
-  setError(data.error || "Login failed");
-}
+//     //new change 
+//     const data = await res.json();
+//    if (data.success || data.token || data.user) {
+//   localStorage.setItem("token", data.token);          // ✅ Save token
+//   localStorage.setItem("userId", data.user._id);      // ✅ Save userId temporarily
+//   navigate("/");                                      // ✅ Redirect after login
+// } else {
+//   setError(data.error || "Login failed");
+// }
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      navigate("/");
+    } else {
+      setError(data.error || "Login failed");
+    }
   };
   return (
     <Box maxWidth={400} mx="auto" p={2}>
