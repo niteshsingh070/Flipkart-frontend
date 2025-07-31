@@ -113,7 +113,7 @@ function Cart() {
 
   try {
     await fetch(
-      `https://flipkart-backend-6frd.onrender.com/cart/${userId}/${itemToRemove.productId}`,
+      `https://flipkart-backend-6frd.onrender.com/cart/2/${itemToRemove.productId}`,
       {
         method: "DELETE",
       }
