@@ -6,8 +6,8 @@ function Cart() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // const userId = "2"; // Hardcoded for now, replace with dynamic user id if available
-  const userId = localStorage.getItem("userId");
+   const userId = "2"; // Hardcoded for now, replace with dynamic user id if available
+  // const userId = localStorage.getItem("userId");
 
 
   const deliveryAddress = {
