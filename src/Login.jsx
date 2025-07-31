@@ -19,7 +19,7 @@ function Login() {
     );
     //new change 
     const data = await res.json();
-   if (data.success && data.token && data.user) {
+   if (data.success || data.token || data.user) {
   localStorage.setItem("token", data.token);          // ✅ Save token
   localStorage.setItem("userId", data.user._id);      // ✅ Save userId temporarily
   navigate("/");                                      // ✅ Redirect after login
