@@ -6,7 +6,9 @@ function Cart() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const userId = "2"; // Hardcoded for now, replace with dynamic user id if available
+  // const userId = "2"; // Hardcoded for now, replace with dynamic user id if available
+  const userId = localStorage.getItem("userId");
+
 
   const deliveryAddress = {
     location: "Sample address",
@@ -111,7 +113,7 @@ function Cart() {
 
   try {
     await fetch(
-      `https://flipkart-backend-6frd.onrender.com/cart/2/${itemToRemove.productId}`,
+      `https://flipkart-backend-6frd.onrender.com/cart/${userId}/${itemToRemove.productId}`,
       {
         method: "DELETE",
       }
