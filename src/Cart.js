@@ -99,11 +99,30 @@ function Cart() {
     }
   };
 
-  const handleRemove = (idx) => {
-    const items = [...cartItems];
-    items.splice(idx, 1);
-    setCartItems(items);
-  };
+  // const handleRemove = (idx) => {
+  //   const items = [...cartItems];
+  //   items.splice(idx, 1);
+  //   setCartItems(items);
+  // };
+  // adding new delete call 
+  const handleRemove = async (idx) => {
+  const items = [...cartItems];
+  const itemToRemove = items[idx];
+
+  try {
+    await fetch(
+      `https://flipkart-backend-6frd.onrender.com/cart/2/${itemToRemove.productId}`,
+      {
+        method: "DELETE",
+      }
+    );
+  } catch (err) {
+    console.error("Failed to delete from backend", err);
+  }
+
+  items.splice(idx, 1);
+  setCartItems(items);
+};
 
   // Pricing logic (fallbacks for missing product info)
   const price = cartItems.reduce(
